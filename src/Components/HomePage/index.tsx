@@ -1,4 +1,3 @@
-"use client";
 import { useState } from 'react';
 import Image from 'next/image';
 import menu_white from '../../Assets/menu_white.png';
@@ -14,10 +13,12 @@ import arrow from '../../Assets/Arrow.png';
 import arrow_active from '../../Assets/arrow_active.png';
 import phone from '../../Assets/phone.png';
 import phone_active from '../../Assets/phone_active.png';
+import Cards from '../Cards';
 
 const HomePage = () => {
     const [selected, setSelected] = useState<string | null>('card');
     const [selectedView, setSelectedView] = useState<string | null>('board');
+
     
     return (
         <section className="homePage w-full h-screen p-2 flex justify-around items-center">
@@ -43,7 +44,7 @@ const HomePage = () => {
                     </div>
                 </div>
                 <hr />
-            <div className='right_main_content_homepage w-full h-[calc(100%-50px)] mt-4'>
+            <div className='right_main_content_homepage w-full h-[calc(100%-50px)] mt-3 flex flex-col justify-around'>
                 <div className='flex w-full justify-between items-center'>
                     <div className="flex w-[74%] bg-[#000] h-11 rounded-[24px] flex items-center gap-2 font-semibold">
                             <p onClick={() => setSelectedView('list')} className={selectedView === 'list' ? 'cursor-pointer px-4 border-[2px] border-[#6f4e20] border-solid w-fit h-[calc(100%-2px)] rounded-[24px] flex items-center justify-center' : 'cursor-pointer px-4 w-fit h-[calc(100%-2px)] rounded-[24px] flex items-center justify-center'}>List View</p>
@@ -61,6 +62,9 @@ const HomePage = () => {
                         </div>
                     </div>
                 </div>
+                <section className='cards_container w-full h-[calc(100%-60px)] border-2 border-white border-solid mt-2'>
+                    <Cards classtype="in_progress" type="In Progress" title="Construction Tender 1" description="Description goes in here about the tender" date="12 Jan 2025" priority="Low" />
+                </section>
             </div>
             </section>
         </section>

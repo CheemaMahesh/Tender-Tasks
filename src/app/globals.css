@@ -19,3 +19,68 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+.in_progress{
+  border: 1px solid #03bafb;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  
+  .card_label{
+    background-color: #0c415c;
+  }
+
+.card_dot{
+  background-color: #03bafb;
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+}
+.card_description{
+  font-size: 11px;
+}
+.card_assignee{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+.card_date{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+.card_priority_date_wrapper{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+}
+.top_card_container{
+  border-bottom: 1px solid #FFF;
+}
+.card_comments{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+.card_attach{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+.card_label {
+  width: fit-content;
+  padding-inline: 11px;
+  padding-block: 2px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  gap: 6px;
+}
